@@ -4,148 +4,168 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KHEMTRON - Powering Your Digital Lifestyle</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #1f2937;
+    .parallax-section {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
-      padding: 20px;
-      text-align: center;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #111827;
+    .parallax-1 {
+      background-image: url('https://images.unsplash.com/photo-1580910051070-36c0bb45f121?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
     }
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      display: block;
-      text-decoration: none;
+    .parallax-2 {
+      background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
     }
-    nav a:hover {
-      background-color: #2563eb;
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 5rem 0;
     }
-    .hero {
-      background-color: #2563eb;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .product-card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    footer {
-      background: #1f2937;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    form input, form textarea {
+    .product-img {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    form button {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
+      height: auto;
       border-radius: 5px;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    });
+  </script>
 </head>
 <body>
-  <header>
-    <h1>KHEMTRON</h1>
-    <p>Powering Your Digital Lifestyle</p>
-  </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#products">Products</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/mnt/data/KHEMTRON Logo on Black Texture.png" alt="KHEMTRON Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <section class="hero">
-    <div>Experience Innovation with KHEMTRON</div>
-  </section>
+  <header class="bg-primary text-white text-center py-5" data-aos="fade-down">
+    <div class="container">
+      <h1 class="display-4">KHEMTRON</h1>
+      <p class="lead">Powering Your Digital Lifestyle</p>
+    </div>
+  </header>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>KHEMTRON is dedicated to bringing top-notch mobile accessories including earbuds, neckbands, power banks, and cables that combine performance with style. Our mission is to innovate and empower users with high-quality technology solutions.</p>
-  </section>
-
-  <section id="products" class="section">
-    <h2>Our Products</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <h3>Wireless Earbuds</h3>
-        <p>Models: Zion, Groove, Retro, Musical, Pulse</p>
-      </div>
-      <div class="product-card">
-        <h3>Neckbands</h3>
-        <p>Models: Comfort, Folk, Monsoon</p>
-      </div>
-      <div class="product-card">
-        <h3>Cables</h3>
-        <p>Types: Easy, Elite, Zakkas (45W, 65W, Smart Chip)</p>
-      </div>
-      <div class="product-card">
-        <h3>Power Banks</h3>
-        <p>Models: MS PB001 to MS PB009</p>
+  <section class="parallax-section parallax-1">
+    <div class="overlay text-center">
+      <div class="container">
+        <h2 class="mb-3" data-aos="zoom-in">Experience Innovation with KHEMTRON</h2>
       </div>
     </div>
   </section>
 
-  <section id="gallery" class="section">
-    <h2>Gallery</h2>
-    <div class="products-grid">
-      <div class="product-card">Image Placeholder</div>
-      <div class="product-card">Image Placeholder</div>
-      <div class="product-card">Image Placeholder</div>
-      <div class="product-card">Image Placeholder</div>
+  <section id="about" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>KHEMTRON is dedicated to bringing top-notch mobile accessories including earbuds, neckbands, power banks, and cables that combine performance with style. Our mission is to innovate and empower users with high-quality technology solutions.</p>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section id="products" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="fade-up">Our Products</h2>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="flip-left">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Wireless Earbuds</h5>
+              <p class="card-text">Models: Zion, Groove, Retro, Musical, Pulse</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Neckbands</h5>
+              <p class="card-text">Models: Comfort, Folk, Monsoon</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cables</h5>
+              <img src="/mnt/data/WhatsApp Image 2025-05-31 at 3.28.19 PM.jpeg" alt="Cable Product" class="product-img mb-2">
+              <p class="card-text">Types: Easy, Elite, Zakkas (45W, 65W, Smart Chip)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Power Banks</h5>
+              <p class="card-text">Models: MS PB001 to MS PB009</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
+  <section id="gallery" class="parallax-section parallax-2">
+    <div class="overlay text-center">
+      <div class="container">
+        <h2 class="text-white mb-4" data-aos="fade-up">Gallery</h2>
+        <div class="row g-4">
+          <div class="col-md-3" data-aos="zoom-in"><div class="bg-secondary text-white text-center p-5">Image Placeholder</div></div>
+          <div class="col-md-3" data-aos="zoom-in"><div class="bg-secondary text-white text-center p-5">Image Placeholder</div></div>
+          <div class="col-md-3" data-aos="zoom-in"><div class="bg-secondary text-white text-center p-5">Image Placeholder</div></div>
+          <div class="col-md-3" data-aos="zoom-in"><div class="bg-secondary text-white text-center p-5">Image Placeholder</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="text-white bg-dark text-center py-5" data-aos="fade-in">
+    <div class="container">
+      <h2>Get the Best Deals on Your Favorite Accessories!</h2>
+      <p>Subscribe to our newsletter and be the first to know about new arrivals and exclusive offers.</p>
+      <button class="btn btn-primary">Subscribe Now</button>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
     <p>&copy; 2025 KHEMTRON. All rights reserved.</p>
   </footer>
 </body>
