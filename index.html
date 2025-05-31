@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHEMTRON - Powering Your Digital Lifestyle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #111827;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      display: block;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #2563eb;
+    }
+    .hero {
+      background-color: #2563eb;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KHEMTRON</h1>
+    <p>Powering Your Digital Lifestyle</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div>Experience Innovation with KHEMTRON</div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>KHEMTRON is dedicated to bringing top-notch mobile accessories including earbuds, neckbands, power banks, and cables that combine performance with style. Our mission is to innovate and empower users with high-quality technology solutions.</p>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <h3>Wireless Earbuds</h3>
+        <p>Models: Zion, Groove, Retro, Musical, Pulse</p>
+      </div>
+      <div class="product-card">
+        <h3>Neckbands</h3>
+        <p>Models: Comfort, Folk, Monsoon</p>
+      </div>
+      <div class="product-card">
+        <h3>Cables</h3>
+        <p>Types: Easy, Elite, Zakkas (45W, 65W, Smart Chip)</p>
+      </div>
+      <div class="product-card">
+        <h3>Power Banks</h3>
+        <p>Models: MS PB001 to MS PB009</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="products-grid">
+      <div class="product-card">Image Placeholder</div>
+      <div class="product-card">Image Placeholder</div>
+      <div class="product-card">Image Placeholder</div>
+      <div class="product-card">Image Placeholder</div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KHEMTRON. All rights reserved.</p>
+  </footer>
+</body>
+</html>
